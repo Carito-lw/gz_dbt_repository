@@ -1,15 +1,14 @@
-with source as(
-select *
-from {{ref("stg_gz_data__sales")}}
-join
-{{ref("stg_gz_data__product")}}
-using products_id
-),
+SELECT
+  products_id, 
+    date_date, 
+    orders_id,
+    revenue, 
+    quantity, 
+    CAST(purchase_price AS FLOAT64), 
+    ROUND(s.quantity*CAST(p.purchase_price AS FLOAT64),2) AS purchase_cost,
+    s.revenue - ROUND(s.quantity*CAST(p.purchase_price AS FLOAT64),2) AS margin
+FROM {{ref("stg_gz_data__sales")}} s
+LEFT JOIN {{ref("stg_gz_data__product")}} p 
+    USING (products_id)
+  
 
-margin_calc as (
-    select
-    quantity * purchase_price as purchase_cost,
-    revenue - purchase_cost as margin
-    from source
-
-)
