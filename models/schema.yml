@@ -49,3 +49,75 @@ sources:
             description: costo de la logistica
           - name: ship_cost
             description: costo de los envios
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: publicidad
+        columns:
+          - name: date_date
+            description: fecha de ventas 
+          - name: paid_source
+            description: datos de pagos 
+          - name: campaign_key
+            description: primary key
+          - name: campaign_name
+            description: nombre de la campaña
+          - name: ads_cost
+            description: costo de los anuncios
+          - name: impression
+            description: impresiones
+          - name: click
+            description: cantidad de clicks
+      - name: bing
+        identifier: raw_gz_bing
+        description: plataforma bing
+        columns:
+          - name: date_date
+            description: fecha de ventas 
+          - name: paid_source
+            description: datos de pagos 
+          - name: campaign_key
+            description: primary key
+          - name: campaign_name
+            description: nombre de la campaña
+          - name: ads_cost
+            description: costo de los anuncios
+          - name: impression
+            description: impresiones
+          - name: click
+            description: cantidad de clicks
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: plataforma criteo
+        columns:
+          - name: date_date
+            description: fecha de ventas 
+          - name: paid_source
+            description: datos de pagos 
+          - name: campaign_key
+            description: primary key
+          - name: campaign_name
+            description: nombre de la campaña
+          - name: ads_cost
+            description: costo de los anuncios
+          - name: impression
+            description: impresiones
+          - name: click
+            description: cantidad de clicks 
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: plataforma facebook
+        columns:
+          - name: date_date
+            description: fecha de ventas 
+          - name: paid_source
+            description: datos de pagos 
+          - name: campaign_key
+            description: primary key
+          - name: campaign_name
+            description: nombre de la campaña
+          - name: ads_cost
+            description: costo de los anuncios
+          - name: impression
+            description: impresiones
+          - name: click
+            description: cantidad de clicks           
